@@ -9,6 +9,6 @@ export type TypeRootStackParamlist = {
 }
 
 export interface IRoute {
-    name: string
+    name: keyof TypeRootStackParamlist
     component: ComponentType
 }
