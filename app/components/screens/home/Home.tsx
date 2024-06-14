@@ -1,9 +1,9 @@
 import { View, Text, Pressable } from 'react-native'
 import React from 'react'
-import { useTapedNavigation } from '@/hooks/useTypedNavigation'
+import { useTypedNavigation } from '@/hooks/useTypedNavigation'
 
 const Home = () => {
-    const {navigate} = useTapedNavigation()
+    const {navigate} = useTypedNavigation()
   return (
     <View>
       <Text>Home</Text>

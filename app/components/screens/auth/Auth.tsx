@@ -1,6 +1,5 @@
 import Loader from '@/components/ui/Loader'
 import Button from '@/components/ui/button/Button'
-import { useTapedNavigation } from '@/hooks/useTypedNavigation'
 import { IAuthFormData } from '@/types/auth.interface'
 import { useNavigation } from '@react-navigation/native'
 import React, { useState } from 'react'

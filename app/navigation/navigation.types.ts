@@ -1,14 +1,18 @@
 import { ComponentType } from "react"
 
-export type TypeRootStackParamlist = {
+export type TypeRootStackParamList = {
     Auth: undefined
     Home: undefined
+    Favorites: undefined
+    Search: undefined
+    Explorer: undefined
+    Profile: undefined
     Product: {
         slug: string
     }
 }
 
 export interface IRoute {
-    name: keyof TypeRootStackParamlist
+    name: keyof TypeRootStackParamList
     component: ComponentType
 }
