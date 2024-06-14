@@ -16,7 +16,7 @@ const AddToCartButton: FC<IAddToCartButton> = ({ product }) => {
 	const { items } = useCart()
 
 	const currentElement = items.find(
-		(cartItem: any) => cartItem.product.id === product.id
+		cartItem => cartItem.product.id === product.id
 	)
 
 	return (

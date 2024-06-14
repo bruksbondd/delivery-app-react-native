@@ -7,11 +7,15 @@ import Catalog from '@/components/ui/catalog/Catalog'
 import { useGetAllProducts } from './useGetAllProducts'
 
 const Explorer: FC = () => {
-	
+	const { products, isLoading } = useGetAllProducts()
 
 	return (
 		<Layout>
-			
+			{isLoading ? (
+				<Loader />
+			) : (
+				<Catalog title='Explorer' products={products || []} />
+			)}
 		</Layout>
 	)
 }

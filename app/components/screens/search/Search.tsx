@@ -11,13 +11,13 @@ import { ISearchFormData } from './search.interface'
 import { useSearch } from './useSearch'
 
 const Search: FC = () => {
-	// const { searchTerm, isLoading, control, products } = useSearch()
+	const { searchTerm, isLoading, control, products } = useSearch()
 
 	return (
 		<Layout>
 			<Heading>Search</Heading>
 
-			{/* <View className='mt-3'>
+			<View className='mt-3'>
 				<Field<ISearchFormData>
 					placeholder='Type something...'
 					control={control}
@@ -33,7 +33,7 @@ const Search: FC = () => {
 						<Catalog products={products || []} />
 					)}
 				</View>
-			) : null} */}
+			) : null}
 		</Layout>
 	)
 }

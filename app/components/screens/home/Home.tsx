@@ -1,15 +1,21 @@
-import { View, Text, Pressable } from 'react-native'
-import React from 'react'
-import { useTypedNavigation } from '@/hooks/useTypedNavigation'
+import { FC } from 'react'
 
-const Home = () => {
-    const {navigate} = useTypedNavigation()
-  return (
-    <View>
-      <Text>Home</Text>
-      <Pressable onPress={() => navigate('Auth')}><Text>Go to auth</Text></Pressable>
-    </View>
-  )
+import Layout from '@/components/layout/Layout'
+
+import Header from './Header'
+import Banner from './banner/Banner'
+import Categories from './categories/Categories'
+import Products from './products/Products'
+
+const Home: FC = () => {
+	return (
+		<Layout>
+			<Header />
+			<Banner />
+			<Categories />
+			<Products />
+		</Layout>
+	)
 }
 
 export default Home

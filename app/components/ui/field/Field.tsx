@@ -1,8 +1,8 @@
-import { IField } from './field.interface'
 import cn from 'clsx'
-import React from 'react'
 import { Controller } from 'react-hook-form'
-import { View, Text, TextInput } from 'react-native'
+import { Text, TextInput, View } from 'react-native'
+
+import { IField } from './field.interface'
 
 const Field = <T extends Record<string, any>>({
 	control,
@@ -24,7 +24,7 @@ const Field = <T extends Record<string, any>>({
 					<View
 						className={cn(
 							'bg-white w-full border rounded-lg pb-4 pt-2.5 px-4 my-1.5',
-							error ? 'border-red-500' : 'border-gray-400'
+							error ? 'border-red' : 'border-gray-400'
 						)}
 					>
 						<TextInput
@@ -33,11 +33,13 @@ const Field = <T extends Record<string, any>>({
 							onBlur={onBlur}
 							value={(value || '').toString()}
 							className='text-black text-base'
-							placeholderTextColor={'#6A6A6A'}
+							placeholderTextColor='#6A6A6A'
 							{...rest}
 						/>
 					</View>
-					{error && <Text className='text-red-500'>{error.message}</Text>}
+					{error && (
+						<Text className='text-red-500'>{error.message}</Text>
+					)}
 				</>
 			)}
 		/>

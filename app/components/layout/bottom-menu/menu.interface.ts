@@ -1,6 +1,6 @@
+import { TypeFeatherIconNames } from '@/types/icon.interface'
 
 import { TypeRootStackParamList } from '@/navigation/navigation.types'
-import { TypeFeatherIconNames } from '@/types/icon.interfase'
 
 export interface IMenuItem {
 	iconName: TypeFeatherIconNames

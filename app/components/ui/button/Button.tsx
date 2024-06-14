@@ -1,11 +1,12 @@
-import { IButton } from './button.interface'
 import cn from 'clsx'
-import React, { FC, PropsWithChildren } from 'react'
-import { View, Text, Pressable } from 'react-native'
+import { FC, PropsWithChildren } from 'react'
+import { Pressable, Text } from 'react-native'
+
+import { IButton } from './button.interface'
 
 const Button: FC<PropsWithChildren<IButton>> = ({
-	children,
 	className,
+	children,
 	...rest
 }) => {
 	return (
@@ -14,9 +15,11 @@ const Button: FC<PropsWithChildren<IButton>> = ({
 				'self-center mt-3.5 bg-[#47AA52] w-full py-3 font-light rounded-lg',
 				className
 			)}
-            {...rest}
+			{...rest}
 		>
-			<Text className='text-white text-center font-medium text-lg'>{children}</Text>
+			<Text className='text-white text-center font-medium text-lg'>
+				{children}
+			</Text>
 		</Pressable>
 	)
 }

@@ -16,7 +16,7 @@ const Product: FC = () => {
 
 	if (isLoading) return <Loader />
 	if (!product) return null
-
+	console.log('Product', product)
 	return (
 		<Layout>
 			<ProductHeader product={product} />
