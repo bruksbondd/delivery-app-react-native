@@ -30,7 +30,7 @@ export default function App() {
 						<SafeAreaProvider>
 							<StripeProvider
 								publishableKey={
-									process.env.STRIPE_KEY as string
+									process.env.EXPO_PUBLIC_STRIPE_KEY as string
 								}
 							>
 								<Navigation />

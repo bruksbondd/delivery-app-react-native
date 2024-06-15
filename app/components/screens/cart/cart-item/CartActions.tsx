@@ -32,6 +32,7 @@ const CartActions: FC<ICartActions> = ({ item }) => {
 			>
 				<AntDesign name='plus' size={18} />
 			</Pressable>
+			
 		</View>
 	)
 }
