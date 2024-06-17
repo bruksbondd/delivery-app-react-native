@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Delivery app",
-    "slug": "client",
+    "slug": "delivery-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./app/assets/icon.png",
@@ -19,7 +19,7 @@
         "foregroundImage": "./app/assets/adaptive-icon.png",
         "backgroundColor": "#4fae5a"
       },
-      "package": "com.vadim_teacoder.client"
+      "package": "com.bruksbond.deliveryapp"
     },
     "web": {
       "favicon": "./app/assets/favicon.png"
@@ -29,8 +29,9 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "7f668c3d-1816-42d1-b3c6-df39ab1709a6"
+        "projectId": "fdeb9d2c-7809-4e73-868e-fdcbbb58ee29"
       }
-    }
+    },
+    "owner": "bruksbond"
   }
 }

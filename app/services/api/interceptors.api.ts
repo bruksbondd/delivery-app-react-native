@@ -19,7 +19,7 @@ const instance = axios.create({
 
 instance.interceptors.request.use(async config => {
 	const accessToken = await getAccessToken()
-
+	
 	if (config.headers && accessToken)
 		config.headers.Authorization = `Bearer ${accessToken}`
 
@@ -30,7 +30,7 @@ instance.interceptors.response.use(
 	config => config,
 	async error => {
 		const originalRequest = error.config
-
+		console.log('API_URL', API_URL, originalRequest)
 		if (
 			(error?.response?.status === 401 ||
 				errorCatch(error) === 'jwt expired' ||

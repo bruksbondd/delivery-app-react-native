@@ -21,6 +21,8 @@ const queryClient = new QueryClient({
 	}
 })
 
+// process.env.EXPO_PUBLIC_STRIPE_KEY as string
+
 export default function App() {
 	return (
 		<QueryClientProvider client={queryClient}>
@@ -30,7 +32,7 @@ export default function App() {
 						<SafeAreaProvider>
 							<StripeProvider
 								publishableKey={
-									process.env.EXPO_PUBLIC_STRIPE_KEY as string
+									'pk_test_51PRuozDWY1hr0vpfIKlbiKjtoevVzBNAgFUsEQ1IjzRZpU6DTgW3Ns3vWIsy8HN1eXmExFej25QFjcWJq84HODnm00YVhu5tey'
 								}
 							>
 								<Navigation />
